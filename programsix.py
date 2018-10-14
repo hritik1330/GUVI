@@ -10,13 +10,13 @@ if c==0:
     if n%4==0:
         if n%100==0:
             if n%400==0:
-                print(str(n)+" is a leap year")
+                print("yes")
             else:
-                print(str(n)+" is not a leap year")
+                print("no")
         else:
-            print(str(n)+" is a leap year")
+            print("yes")
     else:
-        print(str(n)+" is  not a leap year")
+        print("no")
 else:
     print("invalid input")
     
