@@ -3,11 +3,11 @@
 using namespace std;
 
 int main(){
-    long long int n,a,b;
-    cin>>n>>a>>b;
-    if((n/2)%(a+b)==0 && n%2==0)
+    long long int n1,p,q;
+    cin>>n1>>p>>q;
+    if((n1/2)%(p+q)==0 && n1%2==0)
         cout<<"YES";
-    else if(a==b && (n/2)%a==0 && n%2==0)
+    else if(p==q && (n1/2)%p==0 && n1%2==0)
         cout<<"YES";
     else
         cout<<"NO";

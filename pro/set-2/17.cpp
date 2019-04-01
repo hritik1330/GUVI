@@ -5,20 +5,20 @@ int main(){
     int n, k;
     cin>>n>>k;
 
-    vector<int> vec(n);
+    vector<int> vect(n);
     for(int i=0; i<n; i++){
-        cin>>vec[i];
+        cin>>vect[i];
     }
-    sort(vec.begin(), vec.end());
-    bool flags = true;
+    sort(vect.begin(), vect.end());
+    bool flag = true;
     for(int i=0; i<n-1; i++){
-        if(find(vec.begin()+i, vec.end(), k-vec[i]) != vec.end()){
-            flags = false;
+        if(find(vect.begin()+i, vect.end(), k-vect[i]) != vect.end()){
+            flag = false;
             cout<<"yes";
             break;
         }
     }
-    if(flags)
+    if(flag)
         cout<<"no";
     return 0;
 }

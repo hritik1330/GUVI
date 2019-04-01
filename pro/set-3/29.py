@@ -1,10 +1,10 @@
 import math as m
-def digitsum(x):
-  if x<=9:
-    return x
-  return x%10 + digitsum(x//10)
+def digitsum(y):
+  if y<=9:
+    return y
+  return y%10 + digitsum(y//10)
 
-def printPossibleWays(n):
+def printpossibleways(n):
   start = n - min(n,9*m.ceil(m.log10(n)))
   l = []
   for i in range(start, n):
@@ -18,4 +18,4 @@ def printPossibleWays(n):
     print("-1")
 
 
-printPossibleWays(int(input()))
+printpossibleways(int(input()))

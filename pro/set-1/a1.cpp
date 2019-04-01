@@ -2,22 +2,22 @@
 using namespace std;
 
 int main(){
-    int i, n, length=INT_MAX;
+    int k, n, maxi_length=INT_MAX;
     cin>>n;
-    vector<string> vec(n);
+    vecttor<string> vect(n);
     string min_string;
-    for(int i=0; i<n; i++){
-        cin>>vec[i];
-        if(length > vec[i].length()){
-            length = vec[i].length();
-            min_string = vec[i];
+    for(int k=0; k<n; k++){
+        cin>>vect[k];
+        if(maxi_length > vect[k].maxi_length()){
+            maxi_length = vect[k].maxi_length();
+            min_string = vect[k];
         }
     }
 
     bool stop = false;
-    for(i=0; i<length; i++){
+    for(k=0; k<maxi_length; k++){
         for(int j=0; j<n; j++){
-            if(vec[j][i] != min_string[i]){
+            if(vect[j][k] != min_string[k]){
                 stop = true;
                 break;
             }
@@ -28,6 +28,6 @@ int main(){
     if(!stop)
         cout<<min_string;
     else
-        cout<<min_string.substr(0,i-1);
+        cout<<min_string.substr(0,k-1);
     return 0;
 }

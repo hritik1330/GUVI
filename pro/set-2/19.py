@@ -1,39 +1,39 @@
 def merge(l11, l2):
-    i = 0
-    j = 0
-    l = []
-    while i != len(l11) and j != len(l2):
-        if l11[i] <= l2[j]:
-            l.append(l11[i])
-            i+=1
+    p = 0
+    q = 0
+    r = []
+    while p != len(l11) and q != len(l2):
+        if l11[p] <= l2[q]:
+            r.append(l11[p])
+            p+=1
         else:
-            l.append(l2[j])
-            j+=1
-    while i!=len(l11):
-        l.append(l11[i])
-        i+=1
-    while j!=len(l2):
-        l.append(l2[j])
-        j+=1
-    return l
+            r.append(l2[q])
+            q+=1
+    while p!=len(l11):
+        r.append(l11[p])
+        p+=1
+    while q!=len(l2):
+        r.append(l2[q])
+        q+=1
+    return r
 
 k  = int(input())
-l = []
-total = 0
-for i in range(k):
-    l.append(list(map(int,input().split())))
-    total += len(l[-1])
+r = []
+tot = 0
+for p in range(k):
+    r.append(list(map(int,input().split())))
+    tot += len(r[-1])
 
-final = []
-while len(l) != 1:    
-    final = []
-    k = len(l)
-    for i in range(0,k,2):
-        if i == k-1:
-            final.append(l[i])
+finl = []
+while len(r) != 1:    
+    finl = []
+    k = len(r)
+    for p in range(0,k,2):
+        if p == k-1:
+            finl.append(r[p])
         else:
-            final.append(merge(l[i], l[i+1]))
-    l = final
+            finl.append(merge(r[p], r[p+1]))
+    r = finl
 
-l = l[0]
-print(*l)
+r = r[0]
+print(*r)

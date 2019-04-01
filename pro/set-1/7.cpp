@@ -2,12 +2,12 @@
 using namespace std;
 
 int main(){
-    int n;
-    cin>>n;
-    int logn = log2(n);
-    if(pow(2, logn) == n)
+    int num;
+    cin>>num;
+    int logarithmicn = log2(num);
+    if(pow(2, logarithmicn) == num)
         cout<<0;
     else
-        cout<<pow(2, logn+1) - n;
+        cout<<pow(2, logarithmicn+1) - num;
     return 0;
 }

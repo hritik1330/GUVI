@@ -2,43 +2,43 @@
 using namespace std;
 
 int main(){
-    string paths;
-    cin>>paths;
-    char direction = 'x';
+    string path;
+    cin>>path;
+    char dir = 'x';
     int x = 0, y = 0;
-    for(int i=0; i<paths.length(); i++){
-        if(paths[i] == 'G'){
-            if(direction == 'x')
+    for(int i=0; i<path.length(); i++){
+        if(path[i] == 'G'){
+            if(dir == 'x')
                 x++;
-            else if(direction == 'X')
+            else if(dir == 'X')
                 x--;
-            else if(direction == 'y')
+            else if(dir == 'y')
                 y++;
-            else if(direction == 'Y')
+            else if(dir == 'Y')
                 y--;
-        }else if(paths[i]=='L'){
-            if(direction == 'x')
-                direction = 'y';
-            else if(direction == 'X')
-                direction = 'Y';
-            else if(direction == 'y')
-                direction = 'X';
-            else if(direction == 'Y')
-                direction = 'x';
-        } else if(paths[i]=='R'){
-            if(direction == 'x')
-                direction = 'Y';
-            else if(direction == 'X')
-                direction = 'y';
-            else if(direction == 'y')
-                direction = 'x';
-            else if(direction == 'Y')
-                direction = 'X';
+        }else if(path[i]=='L'){
+            if(dir == 'x')
+                dir = 'y';
+            else if(dir == 'X')
+                dir = 'Y';
+            else if(dir == 'y')
+                dir = 'X';
+            else if(dir == 'Y')
+                dir = 'x';
+        } else if(path[i]=='R'){
+            if(dir == 'x')
+                dir = 'Y';
+            else if(dir == 'X')
+                dir = 'y';
+            else if(dir == 'y')
+                dir = 'x';
+            else if(dir == 'Y')
+                dir = 'X';
         }
     }
     if(x==0 && y==0)
-        cout<<"yes";
+        cout<<"YES";
     else
-        cout<<"no";
+        cout<<"NO";
     return 0;
 }

@@ -1,34 +1,34 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void buildLowestNumberRec(string str, int n, string &res) {
+void buildLowestNumberRec(string st, int n, string &rs) {
 	if (n == 0) {
-		res.append(str);
+		rs.append(st);
 		return;
 	}
-	int len = str.length();
+	int len = st.length();
   	if (len <= n)
 		return;
-	int Index = 0;
+	int ind = 0;
 	for (int i = 1; i<=n ; i++)
-		if (str[i] < str[Index])
-			Index = i;
-	res.push_back(str[Index]);
-	string new_str = str.substr(Index+1, len-Index);
-	buildLowestNumberRec(new_str, n-Index, res);
+		if (st[i] < st[ind])
+			ind = i;
+	rs.push_back(st[ind]);
+	string new_str = st.substr(ind+1, len-ind);
+	buildLowestNumberRec(new_str, n-ind, rs);
 }
-string buildLowestNumber(string str, int n) {
-  	if(n>=str.length())
+string buildLowestNumber(string st, int n) {
+  	if(n>=st.length())
       return "0";
-	string res = "";
-	buildLowestNumberRec(str, n, res);
-	return res;
+	string rs = "";
+	buildLowestNumberRec(st, n, rs);
+	return rs;
 }
 
 int main(){
-	string str;
+	string st;
 	int n;
-	cin>>str>>n;
-	cout << buildLowestNumber(str, n);
+	cin>>st>>n;
+	cout << buildLowestNumber(st, n);
 	return 0;
 }

@@ -2,23 +2,23 @@
 using namespace std;
 
 int main(){
-    int n, m, temps, max_count=0;
+    int n, m, tempr, max_cnt=0;
     cin>>n>>m;
 
-    vector<vector<int>> count(n+1, vector<int>(m+1));
+    vector<vector<int>> cnt(n+1, vector<int>(m+1));
     for(int i=0; i<n; i++){
         for(int j=0; j<m; j++){
-            cin>>temps;
-            if(i==0 || j==0 || temps == 0){
-                count[i+1][j+1] = temps;
+            cin>>tempr;
+            if(i==0 || j==0 || tempr == 0){
+                cnt[i+1][j+1] = tempr;
             } else {
-                count[i+1][j+1] = 1 + min({count[i][j+1] , count[i+1][j], count[i][j]});
+                cnt[i+1][j+1] = 1 + min({cnt[i][j+1] , cnt[i+1][j], cnt[i][j]});
             }
-            max_count = max(max_count, count[i+1][j+1]);
+            max_cnt = max(max_cnt, cnt[i+1][j+1]);
         }
     }
-    for(int i=0; i<max_count; i++){
-        for(int j=0; j<max_count; j++){
+    for(int i=0; i<max_cnt; i++){
+        for(int j=0; j<max_cnt; j++){
             cout<<1<<" ";
         }
         cout<<endl;

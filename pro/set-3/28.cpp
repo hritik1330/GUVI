@@ -2,19 +2,19 @@
 using namespace std;
 
 int main(){
-    int n, non = 1;
+    int n, nonn = 1;
     cin>>n;
-    vector<int> vec(n);
+    vector<int> vect(n);
     for(int i=0; i<n; i++){
-        cin>>vec[i];
+        cin>>vect[i];
     }
-    sort(vec.begin(), vec.end());
-    long int sum = vec[0];
+    sort(vect.begin(), vect.end());
+    long int sum = vect[0];
     for(int i=1; i<n; i++){
-        if(vec[i]>=sum)
-            non++;
-        sum += vec[i];
+        if(vect[i]>=sum)
+            nonn++;
+        sum += vect[i];
     }
-    cout<<non<<endl;
+    cout<<nonn<<endl;
 	return 0;
 }

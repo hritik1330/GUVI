@@ -12,7 +12,7 @@ int findgcd(int a, int b){
 struct node{
 	int data;
 	node *left, *right;
-	int start_index, end_start_end;
+	int start_ind, end_start_end;
 };
 
 class SegmentTree{
@@ -21,15 +21,15 @@ public:
 	SegmentTree(int n=100000){
 		tree = new int[2*n];
 	}
-	void buildTree(vector<int> vec) {
-	    this->n = vec.size();
-		for (int i=0; i<vec.size(); i++)
-			tree[n+i] = vec[i];
+	void buildTree(vector<int> vect) {
+	    this->n = vect.size();
+		for (int i=0; i<vect.size(); i++)
+			tree[n+i] = vect[i];
 		for (int i=n-1; i>0; --i)
 			tree[i] = findgcd(tree[i<<1] , tree[i<<1 | 1]);
 	}
-	void updateTreeNode(int p, int value) {
-		tree[p+n] = value;
+	void updateTreeNode(int p, int val) {
+		tree[p+n] = val;
 		p = p+n;
 		for (int i=p; i>1; i>>=1)
 			tree[i>>1] = findgcd(tree[i], tree[i^1]);
@@ -48,15 +48,15 @@ public:
 };
 
 int main(){
-	int n, queries, l, r;
-	cin>>n>>queries;
-	vector<int> vec(n);
+	int n, query, l, r;
+	cin>>n>>query;
+	vector<int> vect(n);
 	for(int i=0; i<n; i++)
-		cin>>vec[i];
+		cin>>vect[i];
 
 	SegmentTree tree;
-	tree.buildTree(vec);
-	for(int i=0; i<queries; i++){
+	tree.buildTree(vect);
+	for(int i=0; i<query; i++){
         cin>>l>>r;
         l--;
         r--;

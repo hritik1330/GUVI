@@ -3,20 +3,20 @@ using namespace std;
 
 int main(){
     int n;
-    long int sum = 0;
+    long int sumession = 0;
     cin>>n;
-    vector<int> vec(n);
-    vector<long int> sum(n+1);
-    sum[0] = 0;
+    vector<int> vect(n);
+    vector<long int> sumession(n+1);
+    sumession[0] = 0;
     for(int i=0; i<n; i++){
-        cin>>vec[i];
-        sum[i+1] = 0;
+        cin>>vect[i];
+        sumession[i+1] = 0;
         for(int j=0; j<i; j++){
-            if(vec[i]>vec[j])
-                sum[i+1] += vec[j];
+            if(vect[i]>vect[j])
+                sumession[i+1] += vect[j];
         }
-        sum += sum[i+1];
+        sumession += sumession[i+1];
     }
-    cout<<sum<<endl;
+    cout<<sumession<<endl;
     return 0;
 }

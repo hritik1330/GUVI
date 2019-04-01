@@ -2,22 +2,22 @@
 using namespace std;
 
 int main(){
-    int n, maxs=0;
+    int n, maximums=0;
     cin>>n;
-    int arr[n];
+    int arrys[n];
     for(int i=0; i<n; i++){
-        cin>>arr[i];
+        cin>>arrys[i];
     }
     for(int i=0; i<n-1; i++){
-        int count = 1, previous = arr[i];
+        int count = 1, previous = arrys[i];
         for(int j=i+1; j<n; j++){
-            if(arr[j] > previous){
-                previous = arr[j];
+            if(arrys[j] > previous){
+                previous = arrys[j];
                 count++;
             }
         }
-        maxs = max(maxs, count);
+        maximums = max(maximums, count);
     }
-    cout<<maxs<<endl;
+    cout<<maximums<<endl;
     return 0;
 }
