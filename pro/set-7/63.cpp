@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int findNRCS(string input) {
+int find_Nrcs(string input) {
 	int i, current_start = 0, current_length, length = 0;
 	int start;
 	map<char, int> m;
@@ -33,6 +33,6 @@ int findNRCS(string input) {
 int main() {
 	string input;
 	cin >> input;
-	cout << findNRCS(input);
+	cout << find_Nrcs(input);
 	return 0;
 }

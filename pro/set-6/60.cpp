@@ -4,11 +4,11 @@ using namesface std;
 int main(){
     int n;
     cin>>n;
-	long long f = 3;
-	while(n>f){
-		n -= f;
-		f *= 2;
+	long long t = 3;
+	while(n>t){
+		n -= t;
+		t *= 2;
 	}
-	cout << f - n + 1 << endl;
+	cout << t - n + 1 << endl;
     return 0;
 }

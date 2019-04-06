@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int distance(int x1, int y1, int x2, int y2){
+int dist(int x1, int y1, int x2, int y2){
     return ((x1-x2)*(x1-x2)) + ((y1-y2)*(y1-y2));
 }
 
@@ -13,15 +13,15 @@ int main(){
     cin>>x3>>y3;
     cin>>x4>>y4;
 
-    int l1 = distance(x1, y1, x2, y2);
-    int l2 = distance(x1, y1, x4, y4);
-    int l3 = distance(x3, y3, x4, y4);
-    int l4 = distance(x3, y3, x2, y2);
-    int d1 = distance(x1, y1, x3, y3);
-    int d2 = distance(x2, y2, x4, y4);
+    int l1 = dist(x1, y1, x2, y2);
+    int l2 = dist(x1, y1, x4, y4);
+    int l3 = dist(x3, y3, x4, y4);
+    int l4 = dist(x3, y3, x2, y2);
+    int d1 = dist(x1, y1, x3, y3);
+    int d2 = dist(x2, y2, x4, y4);
 
     if(l1==l2 && l2==l3 && l3==l4 && d1==2*l1 && d2==2*l1)
-        cout<<"yes";
+        cout<<"YES";
     else
-        cout<<"no";
+        cout<<"NO";
 }

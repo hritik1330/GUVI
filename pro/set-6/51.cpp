@@ -4,20 +4,20 @@ using namespace std;
 int main(){
     int n;
     cin>>n;
-    vector<int> vec(n);
+    vector<int> vect(n);
     for(int i=0; i<n; i++){
-        cin>>vec[i];
+        cin>>vect[i];
     }
-    vector<int> arr1(n);
-    arr1[n-1]=1;
+    vector<int> arry1(n);
+    arry1[n-1]=1;
     for(int i=n-2; i>=0; i--){
-        if((vec[i]>0 && vec[i+1]<0) || (vec[i]<0 && vec[i+1]>0))
-            arr1[i] = arr1[i+1]+1;
+        if((vect[i]>0 && vect[i+1]<0) || (vect[i]<0 && vect[i+1]>0))
+            arry1[i] = arry1[i+1]+1;
         else
-            arr1[i] = 1;
+            arry1[i] = 1;
     }
     for(int i=0; i<n; i++){
-        cout<<arr1[i]<<" ";
+        cout<<arry1[i]<<" ";
     }
 	return 0;
 }
