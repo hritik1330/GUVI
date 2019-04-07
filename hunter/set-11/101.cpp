@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool isPrime(int z){
+bool is_this_prime(int z){
     for(int i=2; i<sqrt(z); i++){
         if(z%i==0){
             return false;
@@ -19,7 +19,7 @@ int main(){
     }else{ arr[0] = 3; z -= 3; }
 
     for(int i=2; i<z-1; i++){
-        if(isPrime(i) && isPrime(z-i)){
+        if(is_this_prime(i) && is_this_prime(z-i)){
             arr[1] = i;
             arr[2] = z-i;
             break;

@@ -1,12 +1,12 @@
-z = input()
-b = input()
+zz = input()
+bb = input()
 
-x = min(len(z), len(b))
+x = min(len(zz), len(bb))
 for i in range(x):
-    print(b[i]+z[i])
+    print(bb[i]+zz[i])
 
-for i in range(x, len(z)):
-    print(z[i])
+for i in range(x, len(zz)):
+    print(zz[i])
 
-for i in range(x, len(b)):
-    print(b[i])
+for i in range(x, len(bb)):
+    print(bb[i])

@@ -1,9 +1,9 @@
-def palindromic_length( center, diff, string):
+def pallin_length( center, diff, string):
     if center-diff == -1 or center+diff == len(string) or string[center-diff] != string[center+diff] :
         return 0
-    return 1 + palindromic_length(center, diff+1, string)
+    return 1 + pallin_length(center, diff+1, string)
 
-def palindromic_string( input_string ):
+def pallin_string( input_string ):
     z = 0    
     new_input_string = ""
 
@@ -12,7 +12,7 @@ def palindromic_string( input_string ):
     new_input_string += input_string[-1]
 
     for i in range(len(new_input_string)) :
-        length = palindromic_length(i, 1, new_input_string)
+        length = pallin_length(i, 1, new_input_string)
 
         if z < length :
             z = length
@@ -23,4 +23,4 @@ def palindromic_string( input_string ):
 
 if __name__ == '__main__':
     n = input()
-    print(palindromic_string(n))
+    print(pallin_string(n))
