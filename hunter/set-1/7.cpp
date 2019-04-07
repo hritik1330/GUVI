@@ -7,13 +7,13 @@
 using namespace std;
 
 int main(){
-    int n, temps;
+    int n, tmp;
     cin>>n;
     map<int,int> m;
     for(int i=0; i<n; i++){
-        cin>>temps;
-        if( (temps+i)%2 )
-            cout<<temps<<" ";
+        cin>>tmp;
+        if( (tmp+i)%2 )
+            cout<<tmp<<" ";
     }
     return 0;
 }

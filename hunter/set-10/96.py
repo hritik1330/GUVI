@@ -1,7 +1,7 @@
-def num(z):
-    if z<9:
-        return z
-    return 9 + 10*num(z-9)
+def num(zz):
+    if zz<9:
+        return zz
+    return 9 + 10*num(zz-9)
     
-z = int(input())
-print(num(z))
+zz = int(input())
+print(num(zz))

@@ -1,33 +1,33 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void changeRowCol(int rooooww, int col, vector<vector<int>> &vec){
+void changeRowscolss(int rows, int cols, vector<vector<int>> &vec){
     for(int i=0; i<vec.size(); i++)
-        vec[i][col] = 0;
-    for(int i=0; i<vec[rooooww].size(); i++)
-        vec[rooooww][i] = 0;
+        vec[i][cols] = 0;
+    for(int i=0; i<vec[rows].size(); i++)
+        vec[rows][i] = 0;
 }
 
 int main(){
-    int rooooww, col;
-    cin>>rooooww>>col;
+    int rows, cols;
+    cin>>rows>>cols;
 
-    vector<vector<int>> vec(rooooww, vector<int>(col));
-    for(int i=0; i<rooooww; i++){
-        for(int j=0; j<col; j++){
+    vector<vector<int>> vec(rows, vector<int>(cols));
+    for(int i=0; i<rows; i++){
+        for(int j=0; j<cols; j++){
             cin>>vec[i][j];
             if(vec[i][j]==0)
                 vec[i][j] = INT_MAX;
         }
     }
 
-    for(int i=0; i<rooooww; i++)
-        for(int j=0; j<col; j++)
+    for(int i=0; i<rows; i++)
+        for(int j=0; j<cols; j++)
             if(vec[i][j] == INT_MAX)
-                changeRowCol(i, j, vec);
+                changeRowscolss(i, j, vec);
 
-    for(int i=0; i<rooooww; i++){
-        for(int j=0; j<col; j++){
+    for(int i=0; i<rows; i++){
+        for(int j=0; j<cols; j++){
             cout<<vec[i][j]<<" ";
         }
         cout<<endl;

@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int getMaxValue(int rows, int column, vector<vector<int>> &vec){
+int getMaximumvalues(int rows, int column, vector<vector<int>> &vec){
     vector<vector<int>> val(rows+1, vector<int>(column+1));
     for(int i=0; i<=rows; i++){
         for(int j=0; j<=column; j++){
@@ -25,6 +25,6 @@ int main(){
             cin>>vec[i][j];
         }
     }
-    cout<<getMaxValue(rows, column, vec);
+    cout<<getMaximumvalues(rows, column, vec);
     return 0;
 }

@@ -2,22 +2,22 @@
 using namespace std;
 
 int main(){
-    int n, temp;
+    int n, tmp;
     cin>>n;
-    vector<int> vec(n);
+    vector<int> vect(n);
     for(int i=0; i<n; i++){
-        cin>>vec[i];
+        cin>>vect[i];
     }
-    sort(vec.begin(), vec.end());
+    sort(vect.begin(), vect.end());
     int min = INT_MAX;
     int a,b;
     for(int i=0; i<n-1; i++){
         for(int j=i+1; j<n; j++){
-            temp = vec[j] + vec[i];
-            if(temp<min && temp>=0){
-                min = temp;
-                a=vec[j];
-                b=vec[i];
+            tmp = vect[j] + vect[i];
+            if(tmp<min && tmp>=0){
+                min = tmp;
+                a=vect[j];
+                b=vect[i];
             }
         }
     }

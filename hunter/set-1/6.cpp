@@ -7,22 +7,22 @@
 using namespace std;
 
 int main(){
-    int n, temps;
+    int n, tmpfile;
     cin>>n;
     map<int,int> m;
     for(int i=0; i<n; i++){
-        cin>>temps;
-        if(m.find(temps) == m.end())
-            m.insert(make_pair(temps, 1));
+        cin>>tmpfile;
+        if(m.find(tmpfile) == m.end())
+            m.insert(make_pair(tmpfile, 1));
         else{
             m.clear();
             break;
         }
     }
     if(m.size()!=0){
-        cout<<"unique";
+        cout<<"UNIQUE";
     }else{
-        cout<<temps;
+        cout<<tmpfile;
     }
     return 0;
 }

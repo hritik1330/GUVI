@@ -4,11 +4,11 @@ using namespace std;
 int main(){
     int n, k;
     cin>>n>>k;
-    vector<int> ab(n);
+    vector<int> vect(n);
     for(int i=0; i<n; i++){
-        cin>>ab[i];
+        cin>>vect[i];
     }
-    sort(ab.begin(), ab.end(), greater<int>());
-    cout<<ab[k-1];
+    sort(vect.begin(), vect.end(), greater<int>());
+    cout<<vect[k-1];
     return 0;
 }

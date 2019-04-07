@@ -2,21 +2,21 @@
 using namespace std;
 
 int main(){
-    string stri;
-    getline(cin, stri);
+    string strn;
+    getline(cin, strn);
     stack<char> s;
-    int _size = stri.size()/2;
+    int _size = strn.size()/2;
     for(int i=0; i<_size; i++)
-        s.push(stri[i]);
-    for(int i=stri.size() - _size; i<stri.size(); i++){
+        s.push(strn[i]);
+    for(int i=strn.size() - _size; i<strn.size(); i++){
         char c=s.top();
         s.pop();
-        if(c!=stri[i])
+        if(c!=strn[i])
             break;
     }
     if(s.empty())
-        cout<<"YES";
+        cout<<"Yes";
     else
-        cout<<"NO";
+        cout<<"No";
     return 0;
 }

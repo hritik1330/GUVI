@@ -1,10 +1,10 @@
-def gcd(z,m):
+def g_c_d(z,m):
     if m == 0:
         return z
-    return gcd(m, z%m)
+    return g_c_d(m, z%m)
 
 z,m = map(int,input().split())
-if gcd(z,m)==1:
-    print("yes")
+if g_c_d(z,m)==1:
+    print("Yes")
 else:
-    print("no")
+    print("No")

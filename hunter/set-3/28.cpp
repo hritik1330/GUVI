@@ -1,11 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool isPalindrome(string x) {
+bool iispallin(string x) {
     if(x.length() <= 1)
         return true;
     if(x[0] == x[x.length()-1] && x.length()>0)
-        return isPalindrome(x.substr(1,x.length()-2));
+        return iispallin(x.substr(1,x.length()-2));
     return false;
 }
 

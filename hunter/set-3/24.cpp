@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool isPossible(int n, vector<int> &vec, int x){
+bool isitpossible(int n, vector<int> &vec, int x){
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
             if(i==j)
@@ -21,9 +21,9 @@ int main(){
     for(int i=0; i<n; i++){
         cin>>vec[i];
     }
-    if(isPossible(n, vec, x))
-        cout<<"YES";
+    if(isitpossible(n, vec, x))
+        cout<<"Yes";
     else
-        cout<<"NO";
+        cout<<"No";
     return 0;
 }

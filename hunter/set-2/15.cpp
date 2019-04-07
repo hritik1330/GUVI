@@ -2,23 +2,23 @@
 using namespace std;
 
 int main(){
-    int n, max=0, poss1=-1;
+    int n, max=0, first_pos=-1;
     cin >> n;
 
-    vector<int> vec(n);
+    vector<int> vect(n);
     for( int i=0; i<n; i++ ){
-        cin >> vec[i];
-        if( max < vec[i] ){
-            max = vec[i];
-            poss1 = i;
+        cin >> vect[i];
+        if( max < vect[i] ){
+            max = vect[i];
+            first_pos = i;
         }
     }
 
     stack<int> s;
-    s.push(vec[n-1]);
-    for(int i=n-2; i>=poss1; i--){
-        if(s.top() <= vec[i]){
-            s.push(vec[i]);
+    s.push(vect[n-1]);
+    for(int i=n-2; i>=first_pos; i--){
+        if(s.top() <= vect[i]){
+            s.push(vect[i]);
         }
     }
     while(!s.empty()){

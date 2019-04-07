@@ -7,15 +7,15 @@
 using namespace std;
 
 int main(){
-    int n, temps;
+    int n, tmp;
     cin>>n;
     map<int,int> m;
     for(int i=0; i<n; i++){
-        cin>>temps;
-        if(m.find(temps) == m.end())
-            m.insert(make_pair(temps, 1));
+        cin>>tmp;
+        if(m.find(tmp) == m.end())
+            m.insert(make_pair(tmp, 1));
         else
-            m.erase(temps);
+            m.erase(tmp);
     }
     map<int,int>::iterator it = m.begin();
     cout << it->first;
